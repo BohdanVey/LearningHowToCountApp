@@ -239,7 +239,7 @@
                             <br><br>
                             Unfortunately, you will not find a simple way to count the number of partitions for any
                             positive
-                            integer N here. This function often denoted as \(p(n)\), does not have a known closed-form
+                            integer \(n\) here. This function, often denoted as \(p(n)\), does not have a known closed-form
                             expression. However, there is still a lot to learn
                             <a href="https://oeis.org/A000041">about it</a>.
                             </p>
@@ -283,8 +283,8 @@
                             </p>
                             <br>
                             <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
-                            \(p_{k}(n)\) is the number of partitions of a number n that contain precisely k parts.
-                            This relates back to the question with urns and balls: k is the number of urns. By definition,
+                            \(p_{k}(n)\) is the number of partitions of a number \(n\) that contain precisely \(k\) parts.
+                            This relates back to the question with urns and balls: \(k\) is the number of urns. By definition,
                             $$\sum\limits_{k = 1}^n{p_{k}(n) = p(n)}$$
                             Since conjugate partitions are constructed using the amount of parts
                             in the original partition, the largest part in a conjugate is always
@@ -292,11 +292,12 @@
                             as the number of partitions where the largest part is exactly \(k\).
                             By subtracting \(k\) from each of those partitions, we get all ways to partition \(n-k\), or \(p(n-k)\).
                             <br><br>
-                            Now that we’re familiar with the concepts at hand, we can tackle directly calculating p(n).
-                            A generating function for p(n) is a reciprocal of the Euler’s function and looks like this:
+                            Now that we’re familiar with the concepts at hand, we can tackle directly calculating \(p(n)\).
+                            A generating function for \(p(n)\) is a reciprocal of the Euler’s function and looks like this:
                             $$\sum\limits_{n=0}^\infty{p(n)x^n}=\prod\limits_{k = 1}^\infty{\frac{1}{1-x^k}}$$
                             Expanding the denominator of the product gets us the
                             <a href="https://en.wikipedia.org/wiki/Pentagonal_number_theorem">pentagonal number theorem</a>.
+                            <br>
                             The asymptotic growth rate of the partition function is given by
                             \(log(p(n)) \approx C\sqrt{n}\) as \(n -> \infty\), where \(C =
                             \pi\sqrt{\frac{2}{3}}\).
