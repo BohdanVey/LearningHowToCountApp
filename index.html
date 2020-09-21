@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Sentra - Free Bootstrap Theme</title>
+    <title>Learning How To Count</title>
 
     <!--
 
@@ -37,28 +37,29 @@
         <div class="tabs-content">
             <div class="wrapper">
                 <ul class="tabs clearfix" data-tabgroup="first-tab-group">
-                    <li><a href="#tab1" class="active">Multinomial theorem</a></li>
-                    <li><a href="#tab2">Integer compositions</a></li>
-                    <li><a href="#tab4">Integer Partitions </a></li>
+                    <li><a href="#tab1" class="active">Multinomial Theorem</a></li>
+                    <li><a href="#tab2">Integer Compositions</a></li>
+                    <li><a href="#tab4">Integer Partitions (Advanced)</a></li>
                 </ul>
                 <section id="first-tab-group" class="tabgroup">
                     <div id="tab1">
                         <p style="font-weight: bold; font-size: 36px; margin-top: 1%; color: #000;">Multinomial
-                            theorem</p>
+                            Theorem</p>
                         <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
-                            One of the problems you may face is to calculate the number of permutations for some set,
-                            which can contain the same symbols. It is a really common problem, which you can see a lot
-                            of time in future. Objects in these problems are the length of the set, while classes are a
-                            number of different elements. We think that both object and classes in this problem are distinguishable.
+                            One of the problems you might face in combinatorics is to calculate the number of permutations for a set
+                            that can contain repeating symbols. It is a really common problem that can emerge a lot of the time in the future.
+                            The objects in these problems are all of the symbols in the set, while the classes are the
+                            number of unique elements. Both the objects and the classes are distinguishable,
+                            however the objects are also strictly ordered.
                         </p>
                         <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
                             border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
-                            <b style="font-size: 24px;">Multinomail theorem problem</b><br>
+                            <b style="font-size: 24px;">Multinomial problem</b><br>
                             <br>
-                            Example: Calculate the number of permutations for the letter from word MISSISSIPPI.
-                            <br>
+                            Calculate the number of permutations of the letters of the word MISSISSIPPI.
+                            <br><br>
                             Objects: 11, distinguishable
-                            <br>
+                            <br><br>
 
                             Classes: 5, distinguishable
                             <br>
@@ -66,21 +67,21 @@
                         <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
                             border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
                             <b style="font-size: 24px;">Explanation</b><br><br>
-                            STEP 1: Calculate number of permutations if each letter werr different$$P(n) =n!$$
-                            STEP 2: Calculate how often each letter appears in the word.
+                            STEP 1: Calculate the number of permutations as if each letter was unique.
+                            $$P(n) =n!$$
+                            STEP 2: Count the number of times each letter appears in the word.
                             $$M = 1$$
                             $$I = 4$$
                             $$S = 4$$
                             $$P = 2$$
-                            STEP 3: Because when we swap the same letters, our permutation remains the sam we
-                            <br>
-                            should divide our answer from STEP 1 by number of permutations of each letter.
+                            STEP 3: Because swapping the identical letters<br>(for instance, two P's) does not change the end result,
+                            we should divide our answer from STEP 1 by the number of permutations of each type of letter.
                             <br>
                             $$N = {N_{total}\choose{N_{M} N_{I} N_{S} N_{P}}} = {11\choose{1\text{ }4\text{
                             }4\text{ }2}} = 34650$$
                         </p>
-                        <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">Here
-                            you can write your own word and get number of permutation for it</p>
+                        <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">Type
+                        any English word in here<br>and get the number of letter permutations for it:</p><br>
                         <input style="text-align: center; font-size: 18px;"
                                id='multonomial_theorem_input' value="MISSISSIPPI"></input>
                         <button style="text-align: center; font-size: 18px; "
@@ -93,9 +94,9 @@
                             </div>
                         </div>
                         <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
-                            To solve problem of this type we often uses <a
-                                href="https://en.wikipedia.org/wiki/Multinomial_theorem">Multinomial theorem</a>.
-
+                            To see the theorem behind our calculations here, check out the <a
+                                href="https://en.wikipedia.org/wiki/Multinomial_theorem">multinomial theorem</a>.
+                            <br><br><br><br>
                         </p>
                     </div>
                     <div id="tab2">
@@ -105,92 +106,96 @@
                              src="static/img/comp1.png">
                         <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
                             One of the most challenging and popular problems in classical combinatorics is distributing
-                            undistinguished items into distinguishable classes. A wide range of some, on the first
-                            glance,
-                            totally different, combinatorial problems can be led down to this approach. The most popular
-                            example is a problem of the number of compositions of an integer with a certain length. The
-                            formulation is following (for wikipedia):
+                            indistinguishable items into distinguishable classes. A wide range of some seemingly
+                            totally different combinatorial problems can be led down to this approach. The most widely known
+                            example is finding the number of compositions for an integer of a certain length. The
+                            formulation is following (from Wikipedia):
                         </p>
-                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%; 
+                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
                             border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
                             <b style="font-size: 24px;">Integer composition problem</b><br><br>
-                            A composition of an integer n is a way of writing n as the sum of a sequence of (strictly)
-                            positive integers. Two sequences that differ
+                            A composition of an integer \(n\) is a way of writing \(n\) as the sum of a sequence of (strictly)
+                            positive integers. Two sequences that differ only
                             in the order of their terms define different compositions of their sum, while they are
-                            considered to define the same partition of that number.
-                            A weak composition of an integer n is similar to a composition of n, but allowing terms of
-                            the sequence to be zero.undistinguished
+                            considered to define the same partition (more about that in the next chapter, Integer Partitions)
+                            of that number.
+                            A weak composition of an integer \(n\) is similar to a composition of \(n\), but it allows the terms of
+                            the sequence to be zero.
                             <br>
                             <br>
-                            And this is literally equivaent to solving the equation:
+                            This is literally equivalent to solving the equation:
                             $$x_1 + x_2 + x_3 + ... + x_k = n$$
-                            $$\textrm{Where } x_i, n, k \in Z, n, k \ge 1$$
-                            \(x_i > 0 \textrm{ refers to classical composition, while } x_i \ge 0\) refers to weak
-                            composition
+                            Where \(x_i, n, k \in Z, n, k \ge 1\)
+                            <br><br>
+                            \(x_i > 0\) refers to classical composition, while \(x_i \ge 0\) refers to weak
+                            composition.
                         </p>
 
-                        <p style="text-align: center; font-size: 22px; margin: 2% 35% auto 35%;
+                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
                         border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
                             <b style="font-size: 24px;">Explanation</b><br><br>
-                            Let us imagine that undistinguished objects are n integers 1. We have to distribute them
-                            among k distinguishable classes (terms of integer composition).
-                            Classic compositions refer to case where each class has to contain at least one object (or
-                            each term has to be at least one).
-                            Weak compositions refer to case where classes can be empty (terms can be zeros).
+                            Let us imagine that the indistinguishable objects are \(n\) integers of value 1. We have to distribute them
+                            among \(k\) distinguishable classes (terms of integer composition).<br><br>
+                            Classic compositions correspond to the case where each class has to contain at least one object (or
+                            each term has to be at least one).<br>
+                            Weak compositions correspond to the case where classes can be empty (terms can be zeros).
                         </p>
 
-                        <p style="text-align: center; font-size: 26px; font-weight: bold; margin: 2% 15% auto 15%; color: #000;">
+                        <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
                             Another classical problem looks a bit lightweight and corresponds to a classical
                             formulation:</p>
 
-                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%; 
+                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
                             border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
-                            <b style="font-size: 24px;">Distributing undistinguished objects among distinguishable
+                            <b style="font-size: 24px;">Distributing indistinguishable objects among distinguishable
                                 classes</b><br><br>
-                            How to distribute n similar books to the k students in the class (students are different and
+                            How to distribute \(n\) similar books to \(k\) students in the class (students are different and
                             unique)?<br><br>
-                            <i>The answer depends on our ability to leave empty classes or not (as in the case of
+                            <i>The answer depends on whether we can leave classes empty (as in the case of
                                 integer distribution)</i>
                         </p>
 
-                        <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 25% auto 25%;">
-                            However problems about integer composition and book distribution seem to be totally
-                            different, they are about literally the same. The solution of classical formulation
+                        <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
+                            Even though problems about integer composition and book distribution seem to be totally
+                            different, they are functionally identical. The solution of the classical formulation
                             of the problem (about objects and classes) for n objects and k classes is the following:
                         </p>
 
-                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%; 
+                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
                             border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
                             <b style="font-size: 24px;">Solution</b><br><br>
-                            When we don't have an ability to leave empty classes, we have \(C_{n-1}^{k-1}\) variants
-                            $$ \textrm{When we have such an ability, then there are } C_{n+k-1}^{k-1} \textrm{
-                            variants}$$
-                            <b style="font-size: 24px;">Explanation ("Stars and bars")</b><br><br>
-                            Let us allocate all n undistinguished objects ("stars") in a row, now imagine we have k-1
-                            separating "bars", which we need to put
-                            somwhere beetwen stars to distribute them among k classes, ranges of stars between neighbour
+                            If we are not allowed to leave empty classes, we have \(C_{n-1}^{k-1}\) possible variants. \((*)\)<br>
+                            If we are, there are \(C_{n+k-1}^{k-1}\) possible distributions. \((**)\)<br><br>
+                            <b style="font-size: 22px;">Explanation ("Stars and bars")</b><br><br>
+                            Let us put all \(n\) indistinguishable objects ("stars") in a row, now imagine we have \(k-1\)
+                            separating "bars" that we need to put
+                            somwhere beetwen the stars to distribute them among \(k\) classes; ranges of stars between adjacent
                             separators refer to corresponding classes
-                            (let us say, first class refers to first range from left, etc). So to count the number of
+                            (as in, the first class refers to first range from left, etc). To count the number of
                             distributions we need to find the number of
-                            allocations of these k - 1 separators. Since no two separators can be neighbors, we have to
-                            choose k - 1 items from n - 1 positions, so we get mentioned earlier answer.<br><br>
-                            When we can leave empty classes we need just to place in a row n + k - 1 stars and then
-                            choose k - 1 star from row to make them separators. Ths counted like
-                            selecting k - 1 item from n + k - 1 avilable what refers to earlier mentioned formula
+                            allocations of these \(k - 1\) separators. Since no two separators can occupy the same spot, we have to
+                            choose \(k - 1\) items from \(n - 1\) positions, which is the \((*)\) answer .<br><br>
+                            If we can leave empty classes, we just need to place \(n + k - 1\) stars in a row and then
+                            choose \(k - 1\) of those stars to act as separators. This is equivalent to
+                            selecting \(k - 1\) item from \(n + k - 1\) avilable, which is the earlier mentioned formula \((**)\).
                         </p>
+                        <br><br><br><br>
 
                     </div>
                     <div id="tab4">
 
                         <p style="font-weight: bold; font-size: 36px; margin-top: 1%; color: #000;">Integer
-                            partitions</p>
+                            Partitions</p>
                         <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
-                            This is by far the least trivial class of problems. On the first glance, the fact that the
+                            This is by far the least trivial class of problems. At first glance, the fact that the
                             classes are indistinguishable changes little to nothing: you only need to divide the result
-                            from
-                            the case where they are distinguishable by the number of classes. Consider the problem with
-                            distributing balls between urns, represented by the equation
-                            $$n_{1}+n_{2}+...+n_{k} = M$$
+                            from the case where they are distinguishable by the number of classes.
+                        </p>
+                            <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
+                            border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
+                            Consider the problem with
+                            distributing balls between urns, represented by the integer composition equation
+                            $$x_1 + x_2 + x_3 + ... + x_k = n$$
                             In it, we imagine that the
                             urns are distinguishable, and thus get additional solutions that only differ by which balls
                             are
@@ -198,7 +203,11 @@
                             solutions
                             and only keep the ones that are truly distinct.
                             However, this doesn’t change the inherent structure of the problem. All we need to do is to
-                            divide the original result by \(k!\). So let’s try to dive a little bit deeper into the
+                            divide the original result by \(k!\).
+                            </p>
+                            <br>
+                            <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
+                            Let us try to dive a little bit deeper into the
                             subject.
 
                             What if we don’t limit ourselves to a set number of classes? In this case, the result would
@@ -209,13 +218,13 @@
                             taking
                             the order of the parts into account, like this:
                             $$7=3 + 2 + 1 + 1$$
-                            In number theory, such a process is called <b>partitioning</b>, while the resulting division
+                            In number theory, such a process is called <i>partitioning</i>, while the resulting division
                             of
                             the
-                            number is called a <b>partition</b>, or an <b>integer partition</b>. The summands of a
+                            number is called a <i>partition</i>, or an <i>integer partition</i>. The summands of a
                             partition
                             are often
-                            called <b>parts</b>.
+                            called <i>parts</i>.
 
                             An example of all possible partitions of a number would be:
                             $$4 = 2 + 2 = 3 + 1 = 2 + 1 + 1 = 1 + 1 + 1 + 1$$
@@ -227,14 +236,15 @@
                             differs from \(3 + 1\) in its order. Because of this, it is a common convention to write the
                             parts
                             in decreasing order.
-
+                            <br><br>
                             Unfortunately, you will not find a simple way to count the number of partitions for any
                             positive
                             integer N here. This function often denoted as \(p(n)\), does not have a known closed-form
                             expression. However, there is still a lot to learn
-
                             <a href="https://oeis.org/A000041">about it</a>.
-                            <br>
+                            </p>
+                            <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
+                            border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
                             Partitions of a number are usually expressed through either a
                             <a href="https://en.wikipedia.org/wiki/Partition_(number_theory)#Ferrers_diagram">Ferrers
                                 diagram</a> or a
@@ -244,9 +254,10 @@
                             While I won’t use any of them here, you can look them up to gain a visual intuition on
                             partitions. In particular, they will help you understand a few interesting facts about
                             partitions, such as conjugate partitions and partitions with distinct parts.
-
+                            </p>
                             <br>
-                            <b>Conjugate partitions</b> are created by “flipping” a diagram of a partition along its
+                            <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
+                            <i>Conjugate partitions</i> are created by “flipping” a diagram of a partition along its
                             main
                             diagonal.
                             Algebraically speaking, for a given partition (example: \(7 = 4 + 2 + 1\)) a conjugate is
@@ -256,34 +267,42 @@
                             the process until nothing remains (for the above example, the conjugate would be \(7 = 3 + 2
                             + 1
                             +
-                            1\)). <b>Self-conjugate partitions</b> are ones that transform into themselves using this
+                            1\)). <i>Self-conjugate partitions</i> are ones that transform into themselves using this
                             process, like
                             \(6 = 3 + 2 + 1\).
 
-                            <b>Partitions with distinct parts</b> are ones in which no number occurs more than once.
+                            <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
+                            border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
+                            <i>Partitions with distinct parts</i> are ones in which no number occurs more than once.
                             These are
                             usually denoted as \(q(n)\), and have their own generating function as well as a recurrence
                             relation
                             given by the pentagonal number theorem. I will not be going to talk about them here though,
                             as
                             they do not relate to the combinatorics in question at all.
+                            </p>
                             <br>
+                            <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
                             \(p_{k}(n)\) is the number of partitions of a number n that contain precisely k parts.
-                            This relates back to the question with urns and balls: k is the number of urns. Obviously,
+                            This relates back to the question with urns and balls: k is the number of urns. By definition,
                             $$\sum\limits_{k = 1}^n{p_{k}(n) = p(n)}$$
                             Since conjugate partitions are constructed using the amount of parts
                             in the original partition, the largest part in a conjugate is always
                             the size of the original. Using this fact, \(p_{k}(n)\) can be expressed
                             as the number of partitions where the largest part is exactly \(k\).
-                            By subtracting \(k\), this number is equal to \(p(n-k)\).
-
+                            By subtracting \(k\) from each of those partitions, we get all ways to partition \(n-k\), or \(p(n-k)\).
+                            <br><br>
                             Now that we’re familiar with the concepts at hand, we can tackle directly calculating p(n).
                             A generating function for p(n) is a reciprocal of the Euler’s function and looks like this:
                             $$\sum\limits_{n=0}^\infty{p(n)x^n}=\prod\limits_{k = 1}^\infty{\frac{1}{1-x^k}}$$
+                            Expanding the denominator of the product gets us the
+                            <a href="https://en.wikipedia.org/wiki/Pentagonal_number_theorem">pentagonal number theorem</a>.
                             The asymptotic growth rate of the partition function is given by
-                            \(log(p(n)) \approx C\sqrt{n}\text{ }as\text{ }n -> \infty, where\text{ }C =
+                            \(log(p(n)) \approx C\sqrt{n}\) as \(n -> \infty\), where \(C =
                             \pi\sqrt{\frac{2}{3}}\).
-                            <br>
+
+                            <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
+                            border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
                             Finally, we can try to limit both the number of parts as well as the largest part in a
                             partition. Let \(p(N, M, n)\) denote the number of partitions of \(n\) with at most \(M\)
                             parts, each of
@@ -296,10 +315,13 @@
                             \(M\) parts of size at most \(N\), and subtracting 1 from each part of such a partition
                             yields a
                             partition of \(n − M\) into at most \(M\) parts.
+                            </p>
                             <br>
-                            We can see that integer partitions are a broader and a more difficult class of problems than
+                            <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
+                            We can see that integer partitions are a broader and a more difficult class of problems than the
                             simple combinatorial ones, and that there is a lot to study about them. However, diving
                             deeper into advanced mathematics is always a useful exercise that is worth doing.
+                            <br><br><br><br>
                         </p>
                     </div>
                 </section>
