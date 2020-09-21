@@ -145,7 +145,9 @@ function calculate_multinomial_coefficient() {
         }
     }
     some_text += '}} = ' + ans + '$$';
+
     some_text = MathJax.tex2chtml(some_text);
+    console.log(some_text);
     document.getElementById("answer_multinomial_theorem").innerHTML = '';
     document.getElementById("answer_multinomial_theorem").appendChild(some_text);
     MathJax.startup.output.clearCache();

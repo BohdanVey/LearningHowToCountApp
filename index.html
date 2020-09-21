@@ -38,19 +38,25 @@
             <div class="wrapper">
                 <ul class="tabs clearfix" data-tabgroup="first-tab-group">
                     <li><a href="#tab1" class="active">Multinomial theorem</a></li>
-                    <li><a href="#tab2">June 2018</a></li>
-                    <li><a href="#tab3">May 2018</a></li>
+                    <li><a href="#tab2">Integer compositions</a></li>
                     <li><a href="#tab4">Integer Partitions </a></li>
                 </ul>
                 <section id="first-tab-group" class="tabgroup">
                     <div id="tab1">
-                        <p>One of the problems you may face is to calculate the number of permutations for some set,
+                        <p style="font-weight: bold; font-size: 36px; margin-top: 1%; color: #000;">Multinomial
+                            theorem</p>
+                        <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
+                            One of the problems you may face is to calculate the number of permutations for some set,
                             which can contain the same symbols. It is a really common problem, which you can see a lot
                             of time in future. Objects in these problems are the length of the set, while classes are a
                             number of different elements. We think that the object in this problem is indistinguishable
                             because if we change the order of object, but object in every position will have the same
                             class,
                             then these permutations will be equal. But classes are distinguishable.
+                        </p>
+                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
+                            border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
+                            <b style="font-size: 24px;">Multinomail theorem problem</b><br>
                             <br>
                             Example: Calculate the number of permutations for the letter from word MISSISSIPPI.
                             <br>
@@ -59,7 +65,10 @@
 
                             Classes: 5, distinguishable
                             <br>
-
+                        </p>
+                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%;
+                            border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
+                            <b style="font-size: 24px;">Explanation</b><br><br>
                             STEP 1: Calculate number of permutations if each letter werr different$$P(n) =n!$$
                             STEP 2: Calculate how often each letter appears in the word.
                             $$M = 1$$
@@ -73,30 +82,112 @@
                             $$N = {N_{total}\choose{N_{M} N_{I} N_{S} N_{P}}} = {11\choose{1\text{ }4\text{
                             }4\text{ }2}} = 34650$$
                         </p>
-                        <p>Here you can write your own word and get number of permutation for it</p>
-                        <input id='multonomial_theorem_input' value="MISSISSIPPI"></input>
-                        <button onclick="calculate_multinomial_coefficient()">Cаlculate</button>
-                        <div id="answer_multinomial_theorem">
-                            <div>$$N = {N_{total} \choose{N_{I}N_{M}N_{W}N_{S}}} = {11
+                        <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">Here
+                            you can write your own word and get number of permutation for it</p>
+                        <input style="text-align: center; font-size: 18px;"
+                               id='multonomial_theorem_input' value="MISSISSIPPI"></input>
+                        <button style="text-align: center; font-size: 18px; "
+                                onclick="calculate_multinomial_coefficient()">Cаlculate
+                        </button>
+                        <div id="answer_multinomial_theorem"
+                             style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
+                            <div style="font-size: 17px;">$$N = {N_{total} \choose{N_{I}N_{M}N_{W}N_{S}}} = {11
                                 \choose{4\text{ }1\text{ }2\text{ }4\text{ }}} = 34650$$
                             </div>
                         </div>
-                        <p>
+                        <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
                             To solve problem of this type we often uses <a
                                 href="https://en.wikipedia.org/wiki/Multinomial_theorem">Multinomial theorem</a>.
 
                         </p>
                     </div>
                     <div id="tab2">
+                        <p style="font-weight: bold; font-size: 36px; margin-top: 1%; color: #000;">Integer
+                            compositions, "Stars and bars"</p>
+                        <img style="position: absolute; top: 10%; left: 78%; width: 20%; height: 70%;"
+                             src="static/img/comp1.png">
+                        <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
+                            One of the most challenging and popular problems in classical combinatorics is distributing
+                            undistinguished items into distinguishable classes. A wide range of some, on the first
+                            glance,
+                            totally different, combinatorial problems can be led down to this approach. The most popular
+                            example is a problem of the number of compositions of an integer with a certain length. The
+                            formulation is following (for wikipedia):
+                        </p>
+                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%; 
+                            border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
+                            <b style="font-size: 24px;">Integer composition problem</b><br><br>
+                            A composition of an integer n is a way of writing n as the sum of a sequence of (strictly)
+                            positive integers. Two sequences that differ
+                            in the order of their terms define different compositions of their sum, while they are
+                            considered to define the same partition of that number.
+                            A weak composition of an integer n is similar to a composition of n, but allowing terms of
+                            the sequence to be zero.undistinguished
+                            <br>
+                            <br>
+                            And this is literally equivaent to solving the equation:
+                            $$x_1 + x_2 + x_3 + ... + x_k = n$$
+                            $$\textrm{Where } x_i, n, k \in Z, n, k \ge 1$$
+                            \(x_i > 0 \textrm{ refers to classical composition, while } x_i \ge 0\) refers to weak
+                            composition
+                        </p>
 
+                        <p style="text-align: center; font-size: 22px; margin: 2% 35% auto 35%;
+                        border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
+                            <b style="font-size: 24px;">Explanation</b><br><br>
+                            Let us imagine that undistinguished objects are n integers 1. We have to distribute them
+                            among k distinguishable classes (terms of integer composition).
+                            Classic compositions refer to case where each class has to contain at least one object (or
+                            each term has to be at least one).
+                            Weak compositions refer to case where classes can be empty (terms can be zeros).
+                        </p>
 
-                    </div>
-                    <div id="tab3">
+                        <p style="text-align: center; font-size: 26px; font-weight: bold; margin: 2% 15% auto 15%; color: #000;">
+                            Another classical problem looks a bit lightweight and corresponds to a classical
+                            formulation:</p>
 
+                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%; 
+                            border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
+                            <b style="font-size: 24px;">Distributing undistinguished objects among distinguishable
+                                classes</b><br><br>
+                            How to distribute n similar books to the k students in the class (students are different and
+                            unique)?<br><br>
+                            <i>The answer depends on our ability to leave empty classes or not (as in the case of
+                                integer distribution)</i>
+                        </p>
+
+                        <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 25% auto 25%;">
+                            However problems about integer composition and book distribution seem to be totally
+                            different, they are about literally the same. The solution of classical formulation
+                            of the problem (about objects and classes) for n objects and k classes is the following:
+                        </p>
+
+                        <p style="text-align: center; font-size: 20px; margin: 2% 30% auto 30%; 
+                            border:3px; border-style:solid; border-color:#444444; padding: 15px; border-radius: 25px; background: #d9d9d9; color: #000;">
+                            <b style="font-size: 24px;">Solution</b><br><br>
+                            When we don't have an ability to leave empty classes, we have \(C_{n-1}^{k-1}\) variants
+                            $$ \textrm{When we have such an ability, then there are } C_{n+k-1}^{k-1} \textrm{
+                            variants}$$
+                            <b style="font-size: 24px;">Explanation ("Stars and bars")</b><br><br>
+                            Let us allocate all n undistinguished objects ("stars") in a row, now imagine we have k-1
+                            separating "bars", which we need to put
+                            somwhere beetwen stars to distribute them among k classes, ranges of stars between neighbour
+                            separators refer to corresponding classes
+                            (let us say, first class refers to first range from left, etc). So to count the number of
+                            distributions we need to find the number of
+                            allocations of these k - 1 separators. Since no two separators can be neighbors, we have to
+                            choose k - 1 items from n - 1 positions, so we get mentioned earlier answer.<br><br>
+                            When we can leave empty classes we need just to place in a row n + k - 1 stars and then
+                            choose k - 1 star from row to make them separators. Ths counted like
+                            selecting k - 1 item from n + k - 1 avilable what refers to earlier mentioned formula
+                        </p>
 
                     </div>
                     <div id="tab4">
-                        <p>
+
+                        <p style="font-weight: bold; font-size: 36px; margin-top: 1%; color: #000;">Integer
+                            partitions</p>
+                        <p style="text-align: center; font-size: 22px; font-weight: bold; margin: 2% 22% auto 22%;">
                             This is by far the least trivial class of problems. On the first glance, the fact that the
                             classes are indistinguishable changes little to nothing: you only need to divide the result
                             from
@@ -220,7 +311,7 @@
     </div>
 </section>
 <section class="footer">
-    <p>Developed by:Bohdan Vey, Yarema Mishchenko, Volodymyr Fedynyak</p>
+    <p style="font-size: 16px;">Developed by: Bohdan Vey, Yarema Mishchenko, Volodymyr Fedynyak</p>
 </section>
 </div>
 
